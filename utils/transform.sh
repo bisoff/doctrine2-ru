@@ -19,8 +19,6 @@
 [source, sql]
 ----
 
-----
-
 [source, php]
 ----
 
