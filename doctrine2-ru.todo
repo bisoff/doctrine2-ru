@@ -5,6 +5,7 @@ do:
 			https://ru.wikipedia.org/wiki/Википедия:Текст_лицензии_Creative_Commons_Attribution-ShareAlike_3.0_Unported
 	□	уточнить лицензию на перевод
 	□	заменить везде ** на *
+	□	en: id96[:ref:` -> link?
 	□	sed [^[:space:]]* -> ' *'
 	□	sed [^[:space:]]_ -> ' _'
 	□	sed [^[:space:]]http:// -> ' http://'
@@ -26,6 +27,7 @@ explore:
 	□	unbreakable source/para
 	□	msys sed [[:alpha:]а-яА-Я] - портит вывод (copy from last 32b? mingw  or  msys2?)
 	□	если sed [[:alpha:]а-яА-Я] заработает, попробывать автозакрывать source перед ^[[:alpha:]а-яА-Я]
+	□	asciidoc: warnings style? (or excamation)
 may be:
 	□	добавить в transform.sh пакетный режим
 	□	добавить разбивку после списка - sed-ом

@@ -22,6 +22,8 @@ sed -E 's/^== [[:digit:]]{1,2}\.[[:digit:]]{1,2}.[[:digit:]]{1,2}\.[[:space:]]+/
 sed -E 's/^=== [[:digit:]]{1,2}\.[[:digit:]]{1,2}.[[:digit:]]{1,2}\.[[:digit:]]{1,2}\.[[:space:]]+/===== /g' "~tmp5" > "~tmp6"
 sed -E 's/^[[:space:]]*<\?php/[source, php]\n----\n<?php\n/g' "~tmp6" > "~tmp7"
 #sed -E 's/^CREATE TABLE /[source, sql]\n----\nCREATE TABLE /g' "~tmp6" > "~tmp7"
+==== entityresult[]@EntityResult
+sed -E 's/^(=+ )([[:alpha:]]+)\[\](.+)/\1\3 [[\2]]/g' 
 mv -f "$fname" "$fname.bak"
 mv -f "~tmp7" "$fname"
 rm "~tmp1" "~tmp2" "~tmp3" "~tmp4" "~tmp5" "~tmp6"
