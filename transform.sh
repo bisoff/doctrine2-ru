@@ -4,7 +4,7 @@
 
 #ex.1: $./transform.sh 08.Работа_с_объектами.asc
 #ex.2: $./transform.sh 09*
-#single cmd ex.: sed -E -i 's/^CREATE TABLE /[source, sql]\n----\nCREATE TABLE /g' 09*
+#ex.3 (cut single cmd): sed -E -i 's/^CREATE TABLE /[source, sql]\n----\nCREATE TABLE /g' 09* > tt
 
 ls "$1"
 [[ $? == 1 ]] && echo Not found && exit
