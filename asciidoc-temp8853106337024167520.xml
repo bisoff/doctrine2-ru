@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>О переводе</title>
+<date>2016-01-08</date>
+</info>
+<preface xml:id="annotation">
+<title>О переводе</title>
+<simpara>Автор перевода: <link xlink:href="https://github.com/odiszapc">Alexey Plotnik</link></simpara>
+<simpara>Ссылка на <link xlink:href="http://odiszapc.ru/doctrine">авторский перевод</link></simpara>
+<simpara>Ссылка на <link xlink:href="http://docs.doctrine-project.org/en/latest/#reference-guide">оригинальный 'Reference Guide' по последней версии doctrine (english)</link></simpara>
+<simpara><emphasis>ПРИМЕЧАНИЯ ПЕРЕВОДЧИКА:<?asciidoc-br?>
+Когда я работал над переводом, в тексте основных глав документации по Doctrine мне неоднократно встречались термины, значение которых понятны лишь в контексте ORM, трактовать их можно по-разному. При прямом переводе без пояснений их смысл может быть утерян. Поэтому в разделе <link xlink:href="Глоссарий.asc">Глоссарий</link> я просто своими словами опишу, что по моему мнению они означают, чтобы вам было понятно о чем будет идти речь и не возникло проблем при чтении руководства.</emphasis></simpara>
+<simpara>_ПРИМЕЧАНИЕ РЕДАКТОРА:<?asciidoc-br?>
+Данная копипаста создана с целью выверки технологии для генерации pdf ebook из web-статей.<?asciidoc-br?>
+Основная проблема, это генерация линков в PDF, на места в другие файлы. Из 'коробки' более-менее приемлимые результаты дало использование стандарта разметки asciidoc и инструмента AsciidocFX (docbook), который выполняет основную работу по автоматическому переформатированию HTML в asciidoc, транформациям в xml и последующей в pdf/mobi/epub. Кросс ссылки между главами (файлами) в pdf так и не взлетели.+
+Прошу прощения за то что выпилил главовые TOC-и. Я признаю только автоматическую генерацию, а нужного результата по стандарту (:toc:[]) мне пока добиться не удалось. Остановился на общем TOC-е, который генериться при экспорте в ebook.<?asciidoc-br?>
+Для генерации pdf/mobi/ebook/html/, проще всего использовать AsciidocFx. На выбор есть инсталяшка, которая сама поставит для себя нужный jdk. Gitprint.com, на момент моих испытаний, не умел работать полноценно с asciidoc. Еле-еле генерит pdf на 'standalone' readme.asc.<?asciidoc-br?>
+C markdown, как со стартовой альтернативой, совсем не задалось. Экспорт в pdf - танцы с бубном (tex), ссылки _</simpara>
+</preface>
+</article>
