@@ -1,13 +1,15 @@
 // Generated in Sublime3 with PlainTasks plugin 
 do:
-	□	уточнить лицензии на оригинал и перевод
+	√	уточнить лицензию на оригинал (Creative Commons Legal Code) https://github.com/doctrine/doctrine2/blob/master/docs/LICENSE.md @done (16-01-08 19:44)
+	□	уточнить лицензию на перевод
 	□	заменить везде ** на *
 	□	sed [^[:space:]]* -> ' *'
 	□	sed [^[:space:]]_ -> ' _'
 	□	sed [^[:space:]]http:// -> ' http://'
-	□	переделать внутрение абсолютные ссылки на относительные
-			http://odiszapc.ru/doctrine/(dql-doctrine-query-language)/#135 -> что то вроде link:dql-doctrine-query-language.asc[??]
-	□	выверить внешние ссылки
+	□	выверить ссылки (см pdf)
+			внешние
+			внутрение абсолютные переделать на относительные
+				http://odiszapc.ru/doctrine/(dql-doctrine-query-language)/#135 -> что то вроде link:dql-doctrine-query-language.asc[??] 
 	□	вычитать списки на отбой
 	□	доперевести некоторые заголовки
 	□	вычитать выделения курсивом и жирным
