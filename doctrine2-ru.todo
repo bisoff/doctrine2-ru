@@ -3,7 +3,9 @@ do:
 	□	заменить везде ** на *
 	□	sed [^[:space:]]* -> ' *'
 	□	sed [^[:space:]]_ -> ' _'
+	□	sed [^[:space:]]http:// -> ' http://'
 	□	переделать внутрение абсолютные ссылки на относительные
+			http://odiszapc.ru/doctrine/(dql-doctrine-query-language)/#135 -> что то вроде link:dql-doctrine-query-language.asc[??]
 	□	выверить внешние ссылки
 	□	вычитать списки на отбой
 	□	вычитать выделения курсивом и жирным
