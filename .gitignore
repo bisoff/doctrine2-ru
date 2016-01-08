@@ -2,3 +2,6 @@
 *.html
 *.epub
 *.mobi
+*.xml
+*.bak
+~tmp*
