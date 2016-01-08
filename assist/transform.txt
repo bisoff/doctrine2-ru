@@ -1,0 +1,35 @@
+#msys 1.9.x:
+	__
+	_
+sed 's/__/_/g' -i 07.Отображения_и_наследование.asc
+
+	= (\d\.\d{1,2}\.)\s
+	^= ([[:digit:]]\.[[:digit:]]{1,2}\.)\s
+	=== 
+sed -E -i 's/^= ([[:digit:]]\.[[:digit:]]{1,2}\.)\s/=== /g' 07.Отображения_и_наследование.asc
+
+	= (\d\.\d{1,2}\.\d\.)\s
+	==== 
+sed -E -i 's/^== ([[:digit:]]\.[[:digit:]]{1,2}.[[:digit:]]{1,2}\.)\s/==== /g' 07.Отображения_и_наследование.asc
+
+	\*\*PHP\*\*\s?\n
+	*PHP*\n[source, php]\n----\n
+sed -E -i 's/^\*\*PHP\*\*[[:space:]]?\n/*PHP*\n[source, php]\n----\n/g' 07.Отображения_и_наследование.asc
+
+	\*\*XML\*\*\n
+	----\n*XML*\n[source, XML]\n----\n
+
+	<\?php
+	[source, php]\n----\n<?php\n
+	----
+sed -E -i 's/^<\?php/[source, php]\n----\n<?php\n/g' 07.Отображения_и_наследование.asc
+
+
+[source, sql]
+----
+
+[source, php]
+----
+
+[source, XML]
+----
