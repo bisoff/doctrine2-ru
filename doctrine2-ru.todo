@@ -1,6 +1,8 @@
 // Generated in Sublime3 with PlainTasks plugin 
 do:
-	√	уточнить лицензию на оригинал (Creative Commons Legal Code) https://github.com/doctrine/doctrine2/blob/master/docs/LICENSE.md @done (16-01-08 19:44)
+	√	уточнить лицензию на оригинал (Creative Commons Legal Code) @done (16-01-08 19:44)
+			https://github.com/doctrine/doctrine2/blob/master/docs/LICENSE.md
+			https://ru.wikipedia.org/wiki/Википедия:Текст_лицензии_Creative_Commons_Attribution-ShareAlike_3.0_Unported
 	□	уточнить лицензию на перевод
 	□	заменить везде ** на *
 	□	sed [^[:space:]]* -> ' *'
