@@ -1,5 +1,4 @@
 #!/bin/sh
-
 #msys 1.9.x
 #ex.: $./trans.sh "23*" all
 
@@ -59,7 +58,7 @@ if [[ "$2" == "note" 	|| "$2" == "all" ]]; then
 	transform ':a;N;N;$!ba;s/Note\n\n/> /g' 'note.' #sed -E ':a;N;N;$!ba;s/Note\n\n/> /g' 23*.asc | head -n 250 | tail -n 10 
 	transform ':a;N;$!ba;s/Note\n\n/> /g' 'note2.'
   fi
-
+[[ "$2" == "warn" 	|| "$2" == "all" ]] && transform ':a;N;$!ba;s/Warning\n\n/WARNING: /g' 'warn.'
 
 
 #sed -E 's/^= [[:space:]]*[^[:digit:]]/== /g' "~tmp2" > "~tmp3"

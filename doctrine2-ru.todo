@@ -27,7 +27,7 @@ explore:
 	□	unbreakable source/para
 	□	msys sed [[:alpha:]а-яА-Я] - портит вывод (copy from last 32b? mingw  or  msys2?)
 	□	если sed [[:alpha:]а-яА-Я] заработает, попробывать автозакрывать source перед ^[[:alpha:]а-яА-Я]
-	□	asciidoc: warnings style? (or excamation)
+	√	asciidoc: warnings style? (or excamation) @done (16-01-10 21:00)
 may be:
 	□	добавить в transform.sh пакетный режим
 	□	добавить разбивку после списка - sed-ом
