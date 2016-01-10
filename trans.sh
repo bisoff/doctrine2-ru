@@ -3,13 +3,13 @@
 #msys 1.9.x
 #ex.: $./trans.sh "23*" all
 
-#ex.: $./trans.sh "23*" aih # anchorInHead
-#ex.: $./trans.sh "23*" s3s 
-#ex.: $./trans.sh "23*" s2s
-#ex.: $./trans.sh "23*" s1s
-#ex.: $./trans.sh "23*"  
+#ex.: ./trans.sh "23*" aih
+#ex.: ./trans.sh "23*" s3s 
+#ex.: ./trans.sh "23*" s2s
+#ex.: ./trans.sh "23*" s1s
+#ex.: ./trans.sh "23*"  
 
-[[ "$1" == "" ]] && echo aih italic bold s1 s1 s111 s1111 php ddl && exit
+[[ "$1" == "" ]] && echo aih italic bold  s1 s2 s3 s4  s3s s2s s1s  php ddl java  enum note && exit
 fname=$(find $1 -name "*.asc")
 [[ "$fname" == "" ]] && echo Not found && exit
 echo "input:     $fname"
@@ -53,7 +53,10 @@ function transform {
 [[ "$2" == "enum" 	|| "$2" == "all" ]] && transform '\#^\*#, \#^[^*].*$# s/(^[^*].*)/\n\1/' 'enum.'
 
 # spec paragraphs:
-[[ "$2" == "note" 	|| "$2" == "all" ]] && transform ':a;N;N;$!ba;s/Note\n\n/> /g' 'note.' #sed -E '\#^Note#, \#^.+$# s/.*/> /g' 23*.asc | head -n 250 | tail -n 10 
+if [[ "$2" == "note" 	|| "$2" == "all" ]]; then
+	transform ':a;N;N;$!ba;s/Note\n\n/> /g' 'note.' #sed -E ':a;N;N;$!ba;s/Note\n\n/> /g' 23*.asc | head -n 250 | tail -n 10 
+	transform ':a;N;$!ba;s/Note\n\n/> /g' 'note2.'
+  fi
 
 
 
@@ -63,4 +66,5 @@ function transform {
 
 #links:
 # <https://github.com/doctrine/cache/tree/master/lib/Doctrine/Common/Cache[https://github.com/doctrine/cache/tree/master/lib/Doctrine/Common/Cache]>
-# grep http 23*.asc | sed -E -n 's/.*(http[[:alnum:]:./]+).*$/\1/p' #show all ext links
+# https://github.com/bisoff/doctrine2-rg-en/blob/master/25.Tools.rst#id1[:doc:`Installation and Configuration <configuration>`]
+#  -> link:02.Установка_и_конфигурирование.asc#configuration[configuration]
