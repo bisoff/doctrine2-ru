@@ -40,9 +40,9 @@ function transform {
 [[ "$2" == "s3"	 	|| "$2" == "all" ]] && transform 's/^== [[:digit:]]{1,2}\.[[:digit:]]{1,2}.[[:digit:]]{1,2}\.[[:space:]]+/==== /g' 's3.' # 1.1.1 Section
 [[ "$2" == "s4" 	|| "$2" == "all" ]] && transform 's/^=== [[:digit:]]{1,2}\.[[:digit:]]{1,2}.[[:digit:]]{1,2}\.[[:digit:]]{1,2}\.[[:space:]]+/===== /g' 's4.'
 
-[[ "$2" == "s3s" 	|| "$2" == "all" ]] && transform 's/^=== ([][:alpha:] []+)/==== \1/g' 's3s' #s3 shift to s4
-[[ "$2" == "s2s" 	|| "$2" == "all" ]] && transform 's/^== ([][:alpha:] []+)/=== \1/g' 's2s' #s3 shift to s4
-[[ "$2" == "s1s" 	|| "$2" == "all" ]] && transform 's/^= ([][:alpha:] []+)/== \1/g' 's2s' #s3 shift to s4
+[[ "$2" == "s3s" 	|| "$2" == "all" ]] && transform 's/^=== ([][:alpha:] []+)/==== \1/g' 's3s.' #s3 shift to s4
+[[ "$2" == "s2s" 	|| "$2" == "all" ]] && transform 's/^== ([][:alpha:] []+)/=== \1/g' 's2s.' #s3 shift to s4
+[[ "$2" == "s1s" 	|| "$2" == "all" ]] && transform 's/^= ([][:alpha:] []+)/== \1/g' 's2s.' #s3 shift to s4
 
 # source:
 [[ "$2" == "php" 	|| "$2" == "all" ]] && transform 's/^[[:space:]]*<\?php/[source, php]\n----\n<?php\n/g' 'php.'
