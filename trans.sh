@@ -3,11 +3,13 @@
 #msys 1.9.x
 #ex.: $./trans.sh "23*" all
 
-#ex.: ./trans.sh "23*" aih
-#ex.: ./trans.sh "23*" s3s 
-#ex.: ./trans.sh "23*" s2s
-#ex.: ./trans.sh "23*" s1s
-#ex.: ./trans.sh "23*"  
+#ex.: trans.sh "26*" aih
+#ex.: trans.sh "26*" s3s 
+#ex.: trans.sh "26*" s2s
+#ex.: trans.sh "26*" s1s
+#ex.: trans.sh "26*" enum
+#ex.: trans.sh "26*" note
+#ex.: trans.sh "26*" java
 
 [[ "$1" == "" ]] && echo aih italic bold  s1 s2 s3 s4  s3s s2s s1s  php ddl java  enum note && exit
 fname=$(find $1 -name "*.asc")
