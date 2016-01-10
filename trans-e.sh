@@ -9,5 +9,6 @@ trans.sh "$fname" s2s
 trans.sh "$fname" s1s
 trans.sh "$fname" enum
 trans.sh "$fname" note
+trans.sh "$fname" warn
 trans.sh "$fname" java
 links.sh "$fname" 
