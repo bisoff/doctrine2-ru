@@ -13,12 +13,14 @@ do:
 			внешние
 			внутрение абсолютные переделать на относительные
 				http://odiszapc.ru/doctrine/(dql-doctrine-query-language)/#135 -> что то вроде link:dql-doctrine-query-language.asc[??] 
+			в The Second Level Cache.asc ссылки на api не работают
 	□	вычитать списки на отбой
 	□	доперевести некоторые заголовки
 	□	вычитать выделения курсивом и жирным
 	□	enums - secondary level
 	□	вычитать в сравнении с eng src
 	□	подсветить красным не переведённые или сложные места
+	□	подсветить красным in-place синтакс ''...''
 explore:
 	□	toc for block ([]) or file
 	□	нумерация глав в тексте
