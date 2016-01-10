@@ -1,7 +1,7 @@
 [[improving_performance]]
-== Improving Performance
+= Improving Performance
 
-=== Bytecode Cache [[bytecode-cache]]
+== Bytecode Cache [[bytecode-cache]]
 
 It is highly recommended to make use of a bytecode cache like APC. A bytecode cache removes the need for parsing PHP code on every request and can greatly improve performance.
 
@@ -9,30 +9,30 @@ It is highly recommended to make use of a bytecode cache like APC. A bytecode ca
 > 
 > __Stas Malyshev, Core Contributor to PHP and Zend Employee__
 
-=== Metadata and Query caches [[metadata-and-query-caches]]
+== Metadata and Query caches [[metadata-and-query-caches]]
 
 As already mentioned earlier in the chapter about configuring Doctrine, it is strongly discouraged to use Doctrine without a Metadata and Query cache (preferably with APC or Memcache as the cache driver). Operating Doctrine without these caches means Doctrine will need to load your mapping information on every single request and has to parse each DQL query on every single request. This is a waste of resources.
 
-=== Alternative Query Result Formats [[alternative-query-result-formats]]
+== Alternative Query Result Formats [[alternative-query-result-formats]]
 
 Make effective use of the available alternative query result formats like nested array graphs or pure scalar results, especially in scenarios where data is loaded for read-only purposes.
 
-=== Read-Only Entities [[read-only-entities]]
+== Read-Only Entities [[read-only-entities]]
 
 Starting with Doctrine 2.1 you can mark entities as read only (See metadata mapping references for details). This means that the entity marked as read only is never considered for updates, which means when you call flush on the EntityManager these entities are skipped even if properties changed. Read-Only allows to persist new entities of a kind and remove existing ones, they are just not considered for updates.
 
-=== Extra-Lazy Collections [[extra-lazy-collections]]
+== Extra-Lazy Collections [[extra-lazy-collections]]
 
-If entities hold references to large collections you will get performance and memory problems initializing them. To solve this issue you can use the EXTRA_LAZY fetch-mode feature for collections. See the link:https://github.com/doctrine/doctrine2/tree/master/docs/en/tutorials/extra-lazy-associations>[Tutorials/extra-lazy-associations] for more information on how this fetch mode works.
+If entities hold references to large collections you will get performance and memory problems initializing them. To solve this issue you can use the EXTRA_LAZY fetch-mode feature for collections. See the https://github.com/bisoff/doctrine2-rg-en/blob/master/24.Improving%20Performance.rst#id1[:doc:`tutorial <../tutorials/extra-lazy-associations>`] for more information on how this fetch mode works.
 
-=== Temporarily change fetch mode in DQL [[temporarily-change-fetch-mode-in-dql]]
+== Temporarily change fetch mode in DQL [[temporarily-change-fetch-mode-in-dql]]
 
-See link:14.Язык_DQL.asc#dql-temporarily-change-fetch-mode[Язык_DQL/dql-temporarily-change-fetch-mode]
+See https://github.com/bisoff/doctrine2-rg-en/blob/master/24.Improving%20Performance.rst#id3[:ref:`Doctrine Query Language chapter <dql-temporarily-change-fetch-mode>`]
 
-=== Apply Best Practices [[apply-best-practices]]
+== Apply Best Practices [[apply-best-practices]]
 
 A lot of the points mentioned in the Best Practices chapter will also positively affect the performance of Doctrine.
 
-=== Change Tracking policies [[change-tracking-policies]]
+== Change Tracking policies [[change-tracking-policies]]
 
-See: link:17.Отслеживание_изменений.asc[17. Отслеживание изменений] 
+See: https://github.com/bisoff/doctrine2-rg-en/blob/master/24.Improving%20Performance.rst#id5[:doc:`Change Tracking Policies <reference/change-tracking-policies>`]
